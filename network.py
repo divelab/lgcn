@@ -105,8 +105,7 @@ class GraphNet(object):
         feed_train_dict = self.pack_trans_dict('train')
         feed_valid_dict = self.pack_trans_dict('valid')
         feed_test_dict = self.pack_trans_dict('test')
-        stats = [0, 0]
-        start = time.time()
+        stats = [0, 0, 0]
         for epoch_num in range(self.conf.max_step+1):
             train_loss, _, summary, train_accuracy = self.sess.run(
                 [self.loss_op, self.train_op, self.train_summary, self.accuracy_op],
@@ -120,19 +119,17 @@ class GraphNet(object):
                 [self.test_summary, self.accuracy_op],
                 feed_dict=feed_test_dict)
             self.save_summary(summary, epoch_num+self.conf.reload_step)
-            if test_accuracy > stats[0]:
-                stats[0], stats[1] = test_accuracy, 0
+            if valid_accuracy >= stats[0]:
+                stats[0], stats[1], stats[2] = valid_accuracy, 0, max(test_accuracy, stats[2])
             else:
                 stats[1] += 1
             if epoch_num and epoch_num % 100 == 0:
                 self.save(epoch_num)
-            print('step: %d --- loss: %.4f, train: %.3f, val: %.3f, test: %.3f, max:%.3f' %(
-                epoch_num, train_loss, train_accuracy, valid_accuracy, test_accuracy, stats[0]))
+            print('step: %d --- loss: %.4f, train: %.3f, val: %.3f' %(
+                epoch_num, train_loss, train_accuracy, valid_accuracy))
             if stats[1] > 150 and epoch_num > 150:
-                print('Test accuracy -----> ', self.seed, stats[0])
+                print('Test accuracy -----> ', self.seed, stats[2])
                 break
-            if epoch_num == 99:
-                print('time for 100 epoch is ', time.time()-start)
 
     def pack_trans_dict(self, action):
         feed_dict = {
