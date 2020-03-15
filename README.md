@@ -1,6 +1,6 @@
 # Large-Scale Learnable Graph Convolutional Networks(LGCN)
 
-Created by [Hongyang Gao](http://eecs.wsu.edu/~hgao/), [Zhengyang Wang](http://www.eecs.wsu.edu/~zwang6/) and [Shuiwang Ji](http://www.eecs.wsu.edu/~sji/) at Washington State University.
+Created by [Hongyang Gao](http://people.tamu.edu/~hongyang.gao/), [Zhengyang Wang](http://people.tamu.edu/~zhengyang.wang/) and [Shuiwang Ji](http://people.tamu.edu/~sji/) at Texas A&M University.
 
 Accepted by KDD18.
 
