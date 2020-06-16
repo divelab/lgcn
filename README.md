@@ -13,7 +13,7 @@ Detailed information about LGCL and LGCN is provided in (https://dl.acm.org/cita
 ## Methods
 
 In this work, we propose the learnable graph convolution layer
-(LGCL). Based on LGCL. we propose the learnable graph
+(LGCL). Based on LGCL. We propose the learnable graph
 convolutional networks.
 
 ### Learnable Graph Convolution Layer
