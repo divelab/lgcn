@@ -18,15 +18,15 @@ convolutional networks.
 
 ### Learnable Graph Convolution Layer
 
-![lgcl](imgs/layer.pdf)
+![lgcl](./doc/layer.pdf)
 
 ### Learnable graph Convolutional Networks
 
-![lgcn](imgs/model.pdf)
+![lgcn](./doc/model.pdf)
 
 ### Batch Training
 
-![batch](imgs/batch.pdf)
+![batch](./doc/batch.pdf)
 
 ## Citation
 
