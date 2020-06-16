@@ -26,7 +26,7 @@ convolutional networks.
 
 ### Batch Training
 
-![batch](./doc/batch.png | width=100)
+![batch](./doc/batch.png)
 
 ## Citation
 
