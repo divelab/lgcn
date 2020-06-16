@@ -10,6 +10,24 @@ Large-Scale Learnable Graph Convolutional Networks provide an efficient way (LGC
 
 Detailed information about LGCL and LGCN is provided in (https://dl.acm.org/citation.cfm?id=3219947).
 
+## Methods
+
+In this work, we propose the learnable graph convolution layer
+(LGCL). Based on LGCL. we propose the learnable graph
+convolutional networks.
+
+### Learnable Graph Convolution Layer
+
+![lgcl](imgs/layer.pdf)
+
+### Learnable graph Convolutional Networks
+
+![lgcn](imgs/model.pdf)
+
+### Batch Training
+
+![batch](imgs/batch.pdf)
+
 ## Citation
 
 If using this code, please cite our paper.
